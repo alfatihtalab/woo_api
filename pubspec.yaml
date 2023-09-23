@@ -1,5 +1,6 @@
 name: woo_api
-description: A new Flutter project.
+description: >-
+  Woocommerce rest api package.
 version: 0.0.1
 homepage: https://github.com/alfatihtalab/woo_api
 
