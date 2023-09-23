@@ -46,8 +46,9 @@ final wooApi = WooApi(
 final response = await wooApi.getProductById(140);
 ```
 
-## Additional information
+## For more info
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+_@alfatihtalab_ |
+[Linkedin](https://www.linkedin.com/in/alfatihtalab/) |
+[Twitter](https://twitter.com/alfatihtalab) |
+[Stackoverflow](https://stackoverflow.com/users/9351052/alfatih-eltayeb)
