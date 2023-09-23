@@ -35,6 +35,27 @@ final wooApi = WooApi(
 final response = await wooApi.getProductById(140);
 ```
 
+```dart
+void main()async{
+  final wooApi = WooApi(
+      scheme: 'YOUR_SCHEMA',
+      host: 'www.yourwordpressdomain.com',
+      consumerKey: 'YOUR_CONSUMER_KEY',
+      consumerSecret: 'YOUR_SECRET_KEY');
+
+  // use try catch to handel errors
+  try{
+    final response = await wooApi.getProductById(140);
+
+  }catch(e){
+  //   handel the errors
+  }
+
+
+
+}
+```
+
 ## For more info
 
 _@alfatihtalab_ |
