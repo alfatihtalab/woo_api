@@ -1,11 +1,4 @@
-
-// To parse this JSON data, do
-//
-//     final customerCreate = customerCreateFromJson(jsonString);
-
-import 'package:meta/meta.dart';
 import 'dart:convert';
-
 import 'orders.dart';
 
 CustomerCreate customerCreateFromJson(String str) => CustomerCreate.fromJson(json.decode(str));

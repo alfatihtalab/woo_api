@@ -12,7 +12,7 @@ export 'src/models/customer.dart'
 
 export 'src/models/coupon.dart' show Coupon, CouponResponse;
 export 'src/models/orders.dart'
-    show OrderCreate, OrderResponse, LineItem, LineItemPost,CouponLine, ShippingLine, ShippingLinePost, Ing;
+    show OrderCreate, OrderResponse, LineItem, LineItemPost,CouponLine, ShippingLine, Ing;
 export 'src/models/products.dart' show Product, ProductCreate, ProductCategory;
 import 'dart:convert';
 import 'dart:io';
@@ -81,7 +81,7 @@ class WooApi {
           'Basic ${base64.encode(utf8.encode('$consumerKey:$consumerSecret'))}',
         },
       );
-      print(response.body);
+
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
@@ -91,9 +91,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load coupon');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -149,7 +147,7 @@ class WooApi {
           HttpHeaders.acceptHeader:'application/json'
         },
       );
-      print(response.body);
+
       if (response.statusCode == 200 || response.statusCode == 201) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
@@ -169,8 +167,7 @@ class WooApi {
   Future<CustomerLoginResponse> customerLogin(
       {required String username, required String password}) async {
     final url = 'https://$host/wp-json/jwt-auth/v1/token';
-    final url2 =
-        'https://$host/wp-json/jwt-auth/v1/token?username=$username&password=$password';
+    // final url2 = 'https://$host/wp-json/jwt-auth/v1/token?username=$username&password=$password';
 
     final body = jsonEncode({"username": username, "password": password});
 
@@ -188,17 +185,13 @@ class WooApi {
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
-        print(response.body);
+
         return customerLoginResponseFromJson(response.body);
       } else {
-        // If the server did not return a 200 OK response,
-        // then throw an exception.
-        print(response.body);
+
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -224,17 +217,13 @@ class WooApi {
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
-        print(response.body);
+
         return customerCreateResponseFromJson(response.body);
       } else {
-        // If the server did not return a 200 OK response,
-        // then throw an exception.
-        print(response.body);
+
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -289,17 +278,14 @@ class WooApi {
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
-        print(response.body);
+
         return customerCreateResponseFromJson(response.body);
       } else {
         // If the server did not return a 200 OK response,
         // then throw an exception.
-        print(response.body);
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -334,7 +320,7 @@ class WooApi {
         },
       );
 
-      print(response.statusCode);
+
 
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
@@ -345,9 +331,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to delete the customer');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -386,7 +370,6 @@ class WooApi {
         },
       );
 
-      print(response.body);
 
       if (response.statusCode == 200 || response.statusCode == 201) {
         // If the server did return a 200 OK response,
@@ -397,9 +380,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to post create');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -450,9 +431,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -488,7 +467,6 @@ class WooApi {
         },
       );
 
-      print(response.statusCode);
 
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
@@ -499,9 +477,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -542,8 +518,8 @@ class WooApi {
           'Basic ${base64.encode(utf8.encode('$consumerKey:$consumerSecret'))}',
         },
       );
-      print(response.statusCode);
-      print(response.body);
+
+
       if (response.statusCode == 200) {
         // If the server did return a 200 OK response,
         // then parse the JSON.
@@ -553,9 +529,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load orders');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -598,9 +572,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load products');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }
@@ -697,9 +669,7 @@ class WooApi {
         // then throw an exception.
         throw Exception('Failed to load products');
       }
-      // var decodedResponse = jsonDecode(utf8.decode(response.bodyBytes)) as Map;
-      //
-      // print(decodedResponse);
+
     } finally {
       client.close();
     }

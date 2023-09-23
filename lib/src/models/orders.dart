@@ -1,19 +1,7 @@
-// To parse this JSON data, do
-//
-//     final orderCreate = orderCreateFromJson(jsonString);
-
-import 'package:meta/meta.dart';
-import 'dart:convert';
-
-// To parse this JSON data, do
-//
-//     final orderCreate = orderCreateFromJson(jsonString);
-
-// To parse this JSON data, do
-//
-//     final orderCreate = orderCreateFromJson(jsonString);
 
 import 'dart:convert';
+
+
 
 OrderCreate orderCreateFromJson(String str) => OrderCreate.fromJson(json.decode(str));
 

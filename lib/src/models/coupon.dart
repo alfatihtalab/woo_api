@@ -1,6 +1,3 @@
-// To parse this JSON data, do
-//
-//     final couponResponse = couponResponseFromJson(jsonString);
 
 import 'dart:convert';
 
