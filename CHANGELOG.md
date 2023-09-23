@@ -1,3 +1,4 @@
-## 0.0.1
+## 0.0.3
 
-* TODO: Describe initial release.
+* All models are available
+* Getting all data using http requests
