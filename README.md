@@ -6,7 +6,7 @@ With WooApi you can not only output a response, but also retrieve modeled object
 See also:
 
 - [The official WooCommerce API docs](https://woocommerce.com/documentation/woocommerce/), which showcases how to use `woocommerc`
-- [Postman API docs](https://www.postman.com/ernestoliberio/workspace/data/documentation/884924-86ebdce1-9ace-45de-91a7-6fb8a6af7ef8), which contains an implementation of that app using `postman` + [ChangeNotifier]
+- [Postman API docs](https://www.postman.com/ernestoliberio/workspace/data/documentation/884924-86ebdce1-9ace-45de-91a7-6fb8a6af7ef8), which contains an implementation of that app using `postman`
 
 
 

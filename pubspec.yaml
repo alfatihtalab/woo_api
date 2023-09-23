@@ -1,8 +1,15 @@
 name: woo_api
 description: >-
   Woocommerce rest api package.
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/alfatihtalab/woo_api
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
